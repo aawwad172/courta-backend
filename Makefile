@@ -12,11 +12,11 @@ install-dotnet-ef:
 
 # Run the API project
 run:
-	dotnet run --project src/Dotnet.Template.Presentation.API
+	dotnet run --project src/Courta.WebAPI
 
 # Run the API project
 watch:
-	dotnet watch --project src/Dotnet.Template.Presentation.API
+	dotnet watch --project src/Courta.WebAPI
 
 # Build the solution
 build:
@@ -32,7 +32,7 @@ clean:
 
 # Create and apply database migrations (for EF Core)
 migrate:
-	dotnet ef migrations add $(name) --project src/Dotnet.Template.Infrastructure --startup-project src/Dotnet.Template.Presentation.API
+	dotnet ef migrations add $(name) --project src/Courta.Infrastructure --startup-project src/Courta.WebAPI
 
 database-update:
-	dotnet ef database update --project src/Dotnet.Template.Infrastructure --startup-project src/Dotnet.Template.Presentation.API
+	dotnet ef database update --project src/Courta.Infrastructure --startup-project src/Courta.WebAPI
