@@ -5,12 +5,12 @@ This is a .NET template built using Domain-Driven Design (DDD) with Clean Archit
 - **Domain:** Contains your core business entities and logic.
 - **Application:** Houses use cases, CQRS command and query handlers, and application-specific services.
 - **Infrastructure:** Implements data access, repositories, UnitOfWork, and integration with external services (e.g., Postgres).
-- **Presentation:** Contains the Web API project, middleware (including JWT authentication, exception handling), and front-facing controllers.
+- **WebAPI:** Contains the Web API project, middleware (including JWT authentication, exception handling), and front-facing controllers.
 
 ## Features
 
 - **Clean Architecture with DDD:**  
-  Organizes your solution into Domain, Application, Infrastructure, and Presentation projects.
+  Organizes your solution into Domain, Application, Infrastructure, and WebAPI projects.
   
 - **Dependency Injection:**  
   DI is set up for each project, ensuring loose coupling and easier testing.
@@ -58,7 +58,7 @@ This is a .NET template built using Domain-Driven Design (DDD) with Clean Archit
 
    - For Husky (pre-commit hooks), run:
      ```bash
-     npx husky-init && npm install
+     dotnet husky install
      ```
    - Restore your .NET packages:
      ```bash
@@ -118,7 +118,7 @@ This is a .NET template built using Domain-Driven Design (DDD) with Clean Archit
   The `IJwtService` interface is defined here for token generation/validation.
 - **Infrastructure:** Implements repositories, a generic repository, and data access via EF Core (Postgres).  
   Uses DI for each component.
-- **Presentation:** Web API project containing middleware (JWT, exception handling) and controllers.
+- **WebAPI:** Web API project containing middleware (JWT, exception handling) and controllers.
 
 ## Exception Handling & API Responses
 

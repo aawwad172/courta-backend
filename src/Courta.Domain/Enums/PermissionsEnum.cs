@@ -35,7 +35,7 @@ public static class PermissionConstants
     // Array containing all Basic User Permissions
     public static readonly string[] BasicUserPermissions =
     [
-        UserSelfRead, TimeRead, TokenRefresh
+        UserSelfRead, TimeRead, TokenRefresh, UserSelfUpdate
     ];
 
 }
